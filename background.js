@@ -13,6 +13,12 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+  id: "separator",
+  type: "separator",
+  contexts: ["all", "tab"]
+});
+
+browser.contextMenus.create({
   id: "merge",
   type: "normal",
   title: "Merge Tabs to One Window",

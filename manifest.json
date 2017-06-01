@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Tab Wrangler",
-  "version": "0.1",
-  "description": "Some methods to re-organize tabs.",
+  "version": "0.11",
+  "description": "Wrangle your tabs!",
   
   "permissions": ["contextMenus", "tabs"],
   
