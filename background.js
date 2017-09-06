@@ -19,9 +19,9 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-  id: "merge",
+  id: "wrangle",
   type: "normal",
-  title: "Merge Tabs to One Window",
+  title: "Wrangle Tabs to One Window",
   contexts: ["all", "tab"]
 });
 
@@ -37,7 +37,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 			var query = getTabs();
 			query.then(sortByTitle, onError);
 			break;
-		case "merge":			
+		case "wrangle":			
 			var windowQuery = getWindow();	
 			windowQuery.then(getWindowId, onError);
 			var tabQuery = getAllTabs();
@@ -86,7 +86,7 @@ function sortByTitle(tabs) {
 
 function mergeTabs(tabs) {
 	for (var i = 0; i < tabs.length; i++) {
-		browser.tabs.move(tabs[i].id, {windowId: windowId, index: -1});
+		browser.tabs.move(tabs[i].id, {windowId: windowId, index: 0});
 	}
 }
 
